@@ -6,8 +6,8 @@ import java.util.Scanner;
 public class HW_15_16 {
     public static void main(String[] args) {
 
-        //task1();
-       // task2();
+        task1();
+        task2();
         task3();
     }
 
@@ -117,7 +117,6 @@ static void task3() {
     public static String MiddleTwoChars(String str) {
         int length = str.length();
         int middleIndex = length / 2;
-
         return str.substring(middleIndex - 1, middleIndex + 1);
     }
 
