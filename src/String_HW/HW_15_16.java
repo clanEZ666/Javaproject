@@ -1,12 +1,13 @@
 package String_HW;
 
 import java.util.Locale;
+import java.util.Scanner;
 
 public class HW_15_16 {
     public static void main(String[] args) {
 
-        task1();
-        task2();
+        //task1();
+       // task2();
         task3();
     }
 
@@ -100,31 +101,39 @@ static void task3() {
       //      результат "ct" (тут надо взять длину и поиграться с индексами, чтобы взять тот кусок, который нужен,
       //      ну и применять метод substring). Проверьте алгоритм на нескольких строках разной длины
 
+    Scanner scanner = new Scanner(System.in);
 
-    String text1 = "Автомобиль";
-    String text2 = "Решето";
-    String text3 = "Картина";
+    System.out.print("Введите строчку с четной длиной: ");
+    String input = scanner.nextLine();
 
-    System.out.println("Длина строки 1: " + text1.length());
-    System.out.println("Длина строки 2: " + text2.length());
-    System.out.println("Длина строки 3: " + text3.length());
+    if (input.length() % 2 != 0) {
+        System.out.println("Длина строки должна быть четной.");
+    } else {
+        System.out.println("Два средних символа: " + MiddleTwoChars(input));
+    }
 
-    String subStr = text1.substring(4,6);
-    System.out.println("Подстрока первой строки: " + subStr);
+}
 
-    String subStr2 = text2.substring(2,4);
-    System.out.println("Подстрока первой строки: " + subStr2);
+    public static String MiddleTwoChars(String str) {
+        int length = str.length();
+        int middleIndex = length / 2;
 
-    String subStr3 = text3.substring(3,5);
-    System.out.println("Подстрока первой строки: " + subStr3);
-
-
+        return str.substring(middleIndex - 1, middleIndex + 1);
+    }
 
 
 
 }
 
-}
+
+
+
+
+
+
+
+
+
 
 
 
