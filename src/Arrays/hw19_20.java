@@ -6,10 +6,10 @@ import java.util.Arrays;
 public class hw19_20 {
     public static void main(String[] args) {
 
-   //     ValueAverage();
-   //     MinValueAndMaxValue();
-   //     vowelLetter();
-   //     SymbolReplace();
+        ValueAverage();
+        MinValueAndMaxValue();
+        vowelLetter();
+        SymbolReplace();
         SplitText();
 
     }
@@ -47,52 +47,52 @@ public class hw19_20 {
         System.out.println("Минимальное значение: " + min);
     }
 
-static void vowelLetter() {
-    char[] chars = {'a', 'B', 'i', 't', 'E', 'r'};
-    String vowels = "AEIOUaeiou";
+    static void vowelLetter() {
+        char[] chars = {'a', 'B', 'i', 't', 'E', 'r'};
+        String vowels = "AEIOUaeiou";
 
-    System.out.println("Гласные буквы: ");
-    for(char vovLett: chars)
-        if(vowels.indexOf(vovLett) != -1) {
-            System.out.print(vovLett + " ");
-        }
-}
-
-static void SymbolReplace() {
-
-    String str = "Hello World This Is Java";
-
-    char[] ch = str.toCharArray();
-
-    for (int i = 0; i < ch.length; i++) {
-        if (ch[i] == ' ') {
-            ch[i] = '_';
-        }
-    }
-    String result = new String(ch);
-    System.out.println(result);
-
-}
-
-static void SplitText() {
-   String str = "apple,banana,grape,orange";
-
-   String[] str1 = str.split(",");
-
-   StringBuilder result = new StringBuilder();
-   result.append("[");
-
-    for (int i = 0; i < str1.length; i++) {
-        result.append("\"").append(str1[i]).append("\"");
-        if ( i < str1.length -1) {
-            result.append(", ");
+        System.out.println("Гласные буквы: ");
+        for (char vovLett : chars)
+            if (vowels.indexOf(vovLett) != -1) {
+                System.out.print(vovLett + " ");
+            }
     }
 
-   }
-    result.append("]");
-    System.out.println(result.toString());
+    static void SymbolReplace() {
+
+        String str = "Hello World This Is Java";
+
+        char[] ch = str.toCharArray();
+
+        for (int i = 0; i < ch.length; i++) {
+            if (ch[i] == ' ') {
+                ch[i] = '_';
+            }
+        }
+        String result = new String(ch);
+        System.out.println(result);
+
+    }
+
+    static void SplitText() {
+        String str = "apple,banana,grape,orange";
+
+        String[] str1 = str.split(",");
+
+        StringBuilder result = new StringBuilder();
+        result.append("[");
+
+        for (int i = 0; i < str1.length; i++) {
+            result.append("\"").append(str1[i]).append("\"");
+            if (i < str1.length - 1) {
+                result.append(", ");
+            }
+
+        }
+        result.append("]");
+        System.out.println(result.toString());
 
 
-}
+    }
 
 }
